@@ -1,0 +1,17 @@
+<%= form_for @todo, url: {action: "create"}, html: {class: "new_todo_form"} do |f| %>
+  Title:
+  <br>
+  <%= f.text_field :title %>
+  <br>
+  Notes:
+  <br>
+  <%= f.text_area :notes, size: "30x12" %>
+  <br>
+  <%= f.submit "Create" %>
+<% end %>
+<br>
+********
+<br>
+<%= link_to "All", todos_path %>
+||
+<%= link_to "New", new_todo_path %>

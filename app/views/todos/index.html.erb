@@ -1,0 +1,20 @@
+<h2>My Todos</h2>
+<% if !@todos.empty? %>
+  <% for todo in @todos %>
+  <br>
+  <%= link_to "#{todo.title}", controller: "todos", action: "show", id: todo %>
+  <br>
+  <%= todo.notes %>
+  <br>
+  <% unless @todos.length == todo.id%>
+    _____
+    <br>
+  <% end %>
+  <% end %>
+<% else %>
+  None
+<% end %>
+<br>
+********
+<br>
+<%= link_to "New", new_todo_path %>
