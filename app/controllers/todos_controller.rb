@@ -15,9 +15,16 @@ class TodosController < ApplicationController
 
   def show
     @todo = Todo.find(params[:id])
+    Rollbar.error('banana', :description => 'yellow')
+    # begin
+    #   @todo = Todo.find(params[:id])
+    # rescue ActiveRecord::RecordNotFound => e
+    #   Rollbar.error(e, )
+    # end
   end
 
   def index
+    Rollbar.info('showing the todos index')
     @todos = Todo.all
   end
 

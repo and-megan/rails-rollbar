@@ -1,6 +1,8 @@
-<%= @todo.title %>
-<br>
-<%= @todo.notes %>
+<% if @todo.present? %>
+  <%= @todo.title%>
+  <br>
+  <%= @todo.notes %>
+<% end %>
 <br>
 <br>
 ********
