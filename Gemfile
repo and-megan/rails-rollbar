@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.1'
 gem 'rollbar'
 gem 'byebug'
+gem 'oj', '~> 2.16.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
