@@ -19,5 +19,7 @@
 
 /node_modules
 /yarn-error.log
-
+.idea/
+config/initializers/rollbar.rb
+config/secrets.yml
 .byebug_history
