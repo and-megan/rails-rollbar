@@ -6,6 +6,7 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
+    'a' + 1
     if @todo.save
       redirect_to todos_path
     else
