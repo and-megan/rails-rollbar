@@ -16,8 +16,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+.idea/
 /node_modules
+workspace.xml
 /yarn-error.log
-
+**/.idea/workspace.xml **/.idea/tasks.xml
 .byebug_history
