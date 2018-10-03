@@ -6,6 +6,7 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
+    'cat' + 123
     if @todo.save
       redirect_to todos_path
     else
@@ -15,8 +16,6 @@ class TodosController < ApplicationController
 
   def show
     @todo = Todo.find(params[:id])
-    Rollbar.error('banana', :params => params)
-    throw new Error('show!')
     # begin
     #   @todo = Todo.find(params[:id])
     # rescue ActiveRecord::RecordNotFound => e
